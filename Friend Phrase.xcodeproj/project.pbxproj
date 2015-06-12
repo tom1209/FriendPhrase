@@ -13,6 +13,8 @@
 		E21201FC1B261E14004B3B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21201FB1B261E14004B3B0B /* Images.xcassets */; };
 		E21201FF1B261E14004B3B0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21201FD1B261E14004B3B0B /* LaunchScreen.xib */; };
 		E212020B1B261E14004B3B0B /* Friend_PhraseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E212020A1B261E14004B3B0B /* Friend_PhraseTests.swift */; };
+		E24A22CA1B2A2E0E00DAB630 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24A22C91B2A2E0E00DAB630 /* PlaySoundsViewController.swift */; };
+		E24A22CC1B2A4E4D00DAB630 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E24A22CB1B2A4E4D00DAB630 /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		E21202041B261E14004B3B0B /* Friend PhraseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Friend PhraseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21202091B261E14004B3B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E212020A1B261E14004B3B0B /* Friend_PhraseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend_PhraseTests.swift; sourceTree = "<group>"; };
+		E24A22C91B2A2E0E00DAB630 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		E24A22CB1B2A4E4D00DAB630 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../../../../Downloads/movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		E21201F11B261E14004B3B0B /* Friend Phrase */ = {
 			isa = PBXGroup;
 			children = (
+				E24A22C91B2A2E0E00DAB630 /* PlaySoundsViewController.swift */,
 				E21201F41B261E14004B3B0B /* AppDelegate.swift */,
 				E21201F61B261E14004B3B0B /* ViewController.swift */,
 				E21201F81B261E14004B3B0B /* Main.storyboard */,
@@ -90,6 +95,7 @@
 		E21201F21B261E14004B3B0B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E24A22CB1B2A4E4D00DAB630 /* movie_quote.mp3 */,
 				E21201F31B261E14004B3B0B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +167,7 @@
 				TargetAttributes = {
 					E21201EE1B261E14004B3B0B = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = TP2E87B8DL;
 					};
 					E21202031B261E14004B3B0B = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -194,6 +201,7 @@
 			files = (
 				E21201FA1B261E14004B3B0B /* Main.storyboard in Resources */,
 				E21201FF1B261E14004B3B0B /* LaunchScreen.xib in Resources */,
+				E24A22CC1B2A4E4D00DAB630 /* movie_quote.mp3 in Resources */,
 				E21201FC1B261E14004B3B0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21201F71B261E14004B3B0B /* ViewController.swift in Sources */,
+				E24A22CA1B2A2E0E00DAB630 /* PlaySoundsViewController.swift in Sources */,
 				E21201F51B261E14004B3B0B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,10 +349,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Friend Phrase/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -351,10 +363,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Friend Phrase/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -411,6 +426,7 @@
 				E21202101B261E14004B3B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E21202111B261E14004B3B0B /* Build configuration list for PBXNativeTarget "Friend PhraseTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +435,7 @@
 				E21202131B261E14004B3B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

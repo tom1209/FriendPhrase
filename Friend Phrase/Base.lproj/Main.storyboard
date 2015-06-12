@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Spj-WT-9Xl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -99,17 +100,54 @@
             </objects>
             <point key="canvasLocation" x="1737" y="418"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="jrf-DM-eO1">
             <objects>
-                <viewController id="4Ki-gh-MdU" sceneMemberID="viewController">
+                <viewController id="4Ki-gh-MdU" customClass="PlaySoundsViewController" customModule="Friend_Phrase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I7z-4N-10D"/>
                         <viewControllerLayoutGuide type="bottom" id="fLf-Xz-qeg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0B5-Tp-3LY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZQ-RI-LZi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Snail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="78" y="122" width="101" height="101"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="4Ki-gh-MdU" eventType="touchUpInside" id="ILq-C3-ygh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eZQ-RI-LZi" firstAttribute="leading" secondItem="0B5-Tp-3LY" secondAttribute="leadingMargin" constant="50" id="BJF-JS-13Z"/>
+                            <constraint firstItem="eZQ-RI-LZi" firstAttribute="top" secondItem="I7z-4N-10D" secondAttribute="bottom" constant="50" id="mWQ-vh-CnI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eZQ-RI-LZi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="BJF-JS-13Z"/>
+                                <exclude reference="mWQ-vh-CnI"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eZQ-RI-LZi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="BJF-JS-13Z"/>
+                                <include reference="mWQ-vh-CnI"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqe-Tj-Hht" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,6 +175,7 @@
     </scenes>
     <resources>
         <image name="Microphone" width="100" height="100"/>
+        <image name="Snail" width="200" height="200"/>
         <image name="Stop" width="100" height="100"/>
     </resources>
 </document>
