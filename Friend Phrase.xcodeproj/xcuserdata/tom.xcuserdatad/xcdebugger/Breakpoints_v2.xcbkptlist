@@ -9,12 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Friend Phrase/ViewController.swift"
-            timestampString = "455577091.872007"
+            filePath = "Friend Phrase/RecordSoundsViewController.swift"
+            timestampString = "456268745.650209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "stopRecording(_:)"
             landmarkType = "5">
          </BreakpointContent>
