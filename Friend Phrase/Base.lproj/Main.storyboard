@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Spj-WT-9Xl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -118,34 +119,75 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="78" y="122" width="101" height="101"/>
+                                    <rect key="frame" x="66" y="114" width="100" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="playSlowAudio:" destination="4Ki-gh-MdU" eventType="touchUpInside" id="ILq-C3-ygh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-yl-E7P">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <size key="titleShadowOffset" width="100" height="100"/>
+                                <state key="normal" image="rabit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="234" y="114" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="4Ki-gh-MdU" eventType="touchUpInside" id="ggq-8B-AKA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWY-wc-MDc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="175" y="500" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudio:" destination="4Ki-gh-MdU" eventType="touchUpInside" id="1nw-kI-zKa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eZQ-RI-LZi" firstAttribute="leading" secondItem="0B5-Tp-3LY" secondAttribute="leadingMargin" constant="50" id="BJF-JS-13Z"/>
+                            <constraint firstItem="c3N-yl-E7P" firstAttribute="top" secondItem="I7z-4N-10D" secondAttribute="bottom" constant="50" id="Dhw-90-Mcf"/>
+                            <constraint firstItem="fLf-Xz-qeg" firstAttribute="top" secondItem="TWY-wc-MDc" secondAttribute="bottom" constant="50" id="fuP-aD-oM5"/>
                             <constraint firstItem="eZQ-RI-LZi" firstAttribute="top" secondItem="I7z-4N-10D" secondAttribute="bottom" constant="50" id="mWQ-vh-CnI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c3N-yl-E7P" secondAttribute="trailing" constant="50" id="paq-yU-Nx5"/>
+                            <constraint firstAttribute="width" secondItem="TWY-wc-MDc" secondAttribute="width" id="wAX-Rg-pO8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eZQ-RI-LZi"/>
+                                <exclude reference="c3N-yl-E7P"/>
+                                <exclude reference="TWY-wc-MDc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="BJF-JS-13Z"/>
                                 <exclude reference="mWQ-vh-CnI"/>
+                                <exclude reference="Dhw-90-Mcf"/>
+                                <exclude reference="paq-yU-Nx5"/>
+                                <exclude reference="wAX-Rg-pO8"/>
+                                <exclude reference="fuP-aD-oM5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="eZQ-RI-LZi"/>
+                                <include reference="c3N-yl-E7P"/>
+                                <include reference="TWY-wc-MDc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="BJF-JS-13Z"/>
                                 <include reference="mWQ-vh-CnI"/>
+                                <include reference="Dhw-90-Mcf"/>
+                                <include reference="paq-yU-Nx5"/>
+                                <include reference="wAX-Rg-pO8"/>
+                                <include reference="fuP-aD-oM5"/>
                             </mask>
                         </variation>
                     </view>
@@ -177,5 +219,6 @@
         <image name="Microphone" width="100" height="100"/>
         <image name="Snail" width="200" height="200"/>
         <image name="Stop" width="100" height="100"/>
+        <image name="rabit" width="200" height="200"/>
     </resources>
 </document>
