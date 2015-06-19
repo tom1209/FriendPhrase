@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="176" y="500" width="50" height="50"/>
+                                    <rect key="frame" x="150" y="450" width="100" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bFy-yE-OhI"/>
@@ -153,13 +153,28 @@
                                     <action selector="stopAudio:" destination="4Ki-gh-MdU" eventType="touchUpInside" id="1nw-kI-zKa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7V-mC-sKm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="66" y="264" width="100" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="4Ki-gh-MdU" eventType="touchUpInside" id="Bh1-sF-iwx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="q7V-mC-sKm" firstAttribute="leading" secondItem="0B5-Tp-3LY" secondAttribute="leadingMargin" constant="50" id="69o-A5-8hQ"/>
                             <constraint firstItem="eZQ-RI-LZi" firstAttribute="leading" secondItem="0B5-Tp-3LY" secondAttribute="leadingMargin" constant="50" id="BJF-JS-13Z"/>
                             <constraint firstItem="c3N-yl-E7P" firstAttribute="top" secondItem="I7z-4N-10D" secondAttribute="bottom" constant="50" id="Dhw-90-Mcf"/>
+                            <constraint firstItem="eZQ-RI-LZi" firstAttribute="centerX" secondItem="q7V-mC-sKm" secondAttribute="centerX" id="Y4I-Y5-fVt"/>
                             <constraint firstItem="fLf-Xz-qeg" firstAttribute="top" secondItem="TWY-wc-MDc" secondAttribute="bottom" constant="50" id="fuP-aD-oM5"/>
                             <constraint firstItem="eZQ-RI-LZi" firstAttribute="top" secondItem="I7z-4N-10D" secondAttribute="bottom" constant="50" id="mWQ-vh-CnI"/>
+                            <constraint firstItem="q7V-mC-sKm" firstAttribute="top" secondItem="I7z-4N-10D" secondAttribute="bottom" constant="200" id="p5V-WD-9l6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c3N-yl-E7P" secondAttribute="trailing" constant="50" id="paq-yU-Nx5"/>
                             <constraint firstAttribute="width" secondItem="TWY-wc-MDc" secondAttribute="width" id="wAX-Rg-pO8"/>
                         </constraints>
@@ -168,14 +183,18 @@
                                 <exclude reference="eZQ-RI-LZi"/>
                                 <exclude reference="c3N-yl-E7P"/>
                                 <exclude reference="TWY-wc-MDc"/>
+                                <exclude reference="q7V-mC-sKm"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="fuP-aD-oM5"/>
-                                <exclude reference="wAX-Rg-pO8"/>
+                                <exclude reference="BJF-JS-13Z"/>
+                                <exclude reference="Y4I-Y5-fVt"/>
+                                <exclude reference="mWQ-vh-CnI"/>
                                 <exclude reference="Dhw-90-Mcf"/>
                                 <exclude reference="paq-yU-Nx5"/>
-                                <exclude reference="BJF-JS-13Z"/>
-                                <exclude reference="mWQ-vh-CnI"/>
+                                <exclude reference="69o-A5-8hQ"/>
+                                <exclude reference="p5V-WD-9l6"/>
+                                <exclude reference="wAX-Rg-pO8"/>
+                                <exclude reference="fuP-aD-oM5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -183,14 +202,18 @@
                                 <include reference="eZQ-RI-LZi"/>
                                 <include reference="c3N-yl-E7P"/>
                                 <include reference="TWY-wc-MDc"/>
+                                <include reference="q7V-mC-sKm"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="fuP-aD-oM5"/>
-                                <include reference="wAX-Rg-pO8"/>
+                                <include reference="BJF-JS-13Z"/>
+                                <include reference="Y4I-Y5-fVt"/>
+                                <include reference="mWQ-vh-CnI"/>
                                 <include reference="Dhw-90-Mcf"/>
                                 <include reference="paq-yU-Nx5"/>
-                                <include reference="BJF-JS-13Z"/>
-                                <include reference="mWQ-vh-CnI"/>
+                                <include reference="69o-A5-8hQ"/>
+                                <include reference="p5V-WD-9l6"/>
+                                <include reference="wAX-Rg-pO8"/>
+                                <include reference="fuP-aD-oM5"/>
                             </mask>
                         </variation>
                     </view>
@@ -222,6 +245,7 @@
         <image name="Microphone" width="100" height="100"/>
         <image name="Snail" width="200" height="200"/>
         <image name="Stop" width="100" height="100"/>
+        <image name="chipmunk" width="200" height="200"/>
         <image name="rabit" width="200" height="200"/>
     </resources>
 </document>
